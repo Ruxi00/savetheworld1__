@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Rank Result</title>
+</head>
+<body>
+    <h1>Class Rank Result</h1>
+    <p>{{ result }}</p>
+
+    <hr>
+  
+    {% if score_list %}
+      <h2>List of Scores:</h2>
+      <ol>
+        {% for score in score_list %}
+          <li>{{ score }}</li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+  
+    <a href="/">input again</a>
+</body>
+</html>

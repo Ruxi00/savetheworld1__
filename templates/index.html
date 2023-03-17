@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Rank</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Class Rank</h1>
+  
+    <form method="POST" action="/rank">
+      
+        <label for="number_people">number of people in your class:</label>
+        <input type="number" id="number_people" name="number_people" min='2' max='30' required><br><br>
+      
+        <label for="score">your score:</label>
+        <input type="number" id="score" name="score" min='0' max='100' required><br><br>
+      
+        <button type="submit">get rank</button>
+      
+    </form>
+  
+</body>
+</html>
