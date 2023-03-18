@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Class Rank Result</title>
+    <title>Class Rank Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Class Rank Result</h1>
+    <h1>Class Rank Results</h1>
     <p>{{ result }}</p>
+
+    <a href="/">input again</a>
 
     <hr>
   
@@ -17,7 +20,20 @@
         {% endfor %}
       </ol>
     {% endif %}
+
+    <hr>
+
+    <h2> Statitics of Scores in Class: </h2>
+
+    <p1>Mean score: {{ mean_score }}</p1><br><br>
+
+    <p1>Median score: {{ median_score }}</p1><br><br>
+
+    <p1>Mode score: {{ mode_score }}</p1><br><br>
+
+    <p1>Standard deviation: {{ stdev_score }}</p1><br><br>
   
-    <a href="/">input again</a>
+
+
 </body>
 </html>
